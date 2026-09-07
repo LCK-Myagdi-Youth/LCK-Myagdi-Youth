@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f7fa;
+  --foreground: #0b1f33;
+  --navy: #0b1f33;
+  --gold: #fbbd2c;
+  --gold-strong: #f3a90f;
+  --card: #ffffff;
+  --muted: #64748b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), Arial, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(251, 190, 44, 0.3);
+}
+
+.container-shell {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-shell {
+  @apply py-20 md:py-24;
+}
+
+.gold-button {
+  @apply inline-flex items-center justify-center rounded-full bg-[#FBBE2C] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-[#0B1F33] transition hover:-translate-y-0.5 hover:bg-[#f5ba1a];
+}
+
+.navy-button {
+  @apply inline-flex items-center justify-center rounded-full bg-[#0B1F33] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:-translate-y-0.5 hover:bg-[#122d4c];
+}
+
+.card-surface {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+}
